@@ -16,9 +16,10 @@ function sendMsg(event){
    const input = document.getElementById('chat-widget__input')
    const text = input.value
    const newDate = new Date();
-   const answer = ['a', 'b', 'c'];
+   const answer = ['не понял', 'решите сами', 'до свидания!', 'как дела?', 'странный Вы'];
     const random = Math.round(Math.random() * (answer.length - 1) )
     const answerChat = answer[random]
+
     console.log(random)
     console.log (answerChat)
    if (event.keyCode === 13) {
@@ -32,6 +33,7 @@ function sendMsg(event){
                 <div class="message__text">${answerChat}</div>
             </div>`
        console.log(messages.innerHTML)
+       input.value = ''
     }    
 }
  
